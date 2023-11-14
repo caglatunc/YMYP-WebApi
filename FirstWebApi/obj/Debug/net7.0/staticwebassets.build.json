@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "nofHxmd8YJW2AXtzIxNvY5RicGO5a8ZwtGv1YOFIDWM=",
+  "Source": "FirstWebApi",
+  "BasePath": "_content/FirstWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FirstWebApi\\wwwroot",
+      "Source": "FirstWebApi",
+      "ContentRoot": "C:\\YMYP-WebApi\\FirstWebApi\\wwwroot\\",
+      "BasePath": "_content/FirstWebApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
