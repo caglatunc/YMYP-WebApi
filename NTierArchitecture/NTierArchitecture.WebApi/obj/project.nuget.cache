@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "QmtmEl7FwgeA2nVW4XtPg2jQNG01OdyMi5RUfR7vLgg3G8Uo+L5Xll+pkDHLbNZKsFcvIOz+jfeZqUOIoVykhA==",
+  "dgSpecHash": "DLdLZfuuhEQLmtZHmrmU/hLpiWdt1q3OzmSVXbWnK62aoOzKC4bzMYDX7VG1ZFPaDy5hor2lj6SLPQtzDK1Avw==",
   "success": true,
   "projectFilePath": "C:\\YMYP-WebApi\\NTierArchitecture\\NTierArchitecture.WebApi\\NTierArchitecture.WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ercan\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\ercan\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.9\\microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\ercan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",

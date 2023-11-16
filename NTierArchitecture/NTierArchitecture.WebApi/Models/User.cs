@@ -1,4 +1,6 @@
-﻿namespace NTierArchitecture.WebApi.Models;
+﻿using NTierArchitecture.WebApi.Services;
+
+namespace NTierArchitecture.WebApi.Models;
 
 
 public sealed class User
@@ -11,8 +13,12 @@ public sealed class User
     public string Name { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
-    public byte[] Password { get; set; } = new byte[64];    
+    public byte[] PasswordHash { get; set; } = new byte[64];    
     public byte[] PasswordSalt { get; set; } = new byte[128];
 
+    public void CreatePassword(string password)
+    {
+        PasswordService.CreatePassword(password, out PasswordHash, out PasswordSalt);
+    }
 }
 

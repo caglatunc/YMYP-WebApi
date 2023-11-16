@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\YMYP-WebApi\\NTierArchitecture\\NTierArchitecture.WebApi\\NTierArchitecture.WebApi.csproj": {}
+    "C:\\YMYP-WebApi\\Portfolio\\Portfolio.WebApi\\Portfolio.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\YMYP-WebApi\\NTierArchitecture\\NTierArchitecture.WebApi\\NTierArchitecture.WebApi.csproj": {
+    "C:\\YMYP-WebApi\\Portfolio\\Portfolio.WebApi\\Portfolio.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\YMYP-WebApi\\NTierArchitecture\\NTierArchitecture.WebApi\\NTierArchitecture.WebApi.csproj",
-        "projectName": "NTierArchitecture.WebApi",
-        "projectPath": "C:\\YMYP-WebApi\\NTierArchitecture\\NTierArchitecture.WebApi\\NTierArchitecture.WebApi.csproj",
+        "projectUniqueName": "C:\\YMYP-WebApi\\Portfolio\\Portfolio.WebApi\\Portfolio.WebApi.csproj",
+        "projectName": "Portfolio.WebApi",
+        "projectPath": "C:\\YMYP-WebApi\\Portfolio\\Portfolio.WebApi\\Portfolio.WebApi.csproj",
         "packagesPath": "C:\\Users\\ercan\\.nuget\\packages\\",
-        "outputPath": "C:\\YMYP-WebApi\\NTierArchitecture\\NTierArchitecture.WebApi\\obj\\",
+        "outputPath": "C:\\YMYP-WebApi\\Portfolio\\Portfolio.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ercan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,17 +41,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.8.0, )"
-            },
-            "FluentValidation.DependencyInjectionExtensions": {
-              "target": "Package",
-              "version": "[11.8.0, )"
-            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.14, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
