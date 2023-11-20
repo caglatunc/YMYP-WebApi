@@ -1,32 +1,51 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using NTierArchitecture.WebApi.DTOs;
+using NTierArchitecture.WebApi.Models;
+using NTierArchitecture.WebApi.Services;
 
 namespace NTierArchitecture.WebApi.Controllers;
-public class AuthController : Controller
+[Route("api/[controller]/[action]")]
+[ApiController]
+public sealed class AuthController : ControllerBase
 {
+    private readonly IValidator<RegisterDto> _registerDtoValidator;
+
+    public AuthController(IValidator<RegisterDto>  registorDtoValidator)
+    {
+        _registerDtoValidator = registorDtoValidator;
+    }
+
     [HttpPost]
     public IActionResult Register(RegisterDto request)
     {
-        if(request.Name.length < 3 || string.IsNullOrWhiteSpace(request.name))
+        #region İş Kuralları
+        var validationResult = _registerDtoValidator.Validate(request);
+        if(!validationResult.IsValid)
         {
-            throw new ArgumentException("Name must be at least 3 characters");
+          throw new ValidationException(validationResult.Errors[0].ErrorMessage);
         }
-        if(request.LastName.length < 3 || string.IsNullOrWhiteSpace(request.LastName))
-        {
-            throw new ArgumentException("Last Name must be at least 3 characters");
-        }
-        if(request.Email.Contains("@") || string.IsNullOrWhiteSpace(request.name) && request.Email.Length < 4)
-        {
-            throw new ArgumentException("Geçerli bir mail adresi giriniz.");
-        }
-     
-        if(request.Password.Length < 1 || string.IsNullOrWhiteSpace(request.Password))
-        {
-            throw new ArgumentException("Password must be at least 1 characters");
-        }
+        #endregion
 
+        #region Password Hashing
         byte[] passwordHash;
         byte[] passwordSalt;
 
         PasswordService.CreatePassword(request.Password, out passwordHash, out passwordSalt);
+        #endregion
+
+        #region User Nesnesi Oluşturma
+        User user = new()
+        {
+            Name = request.Name,
+            LastName = request.LastName,
+            LastName = request.LastName,
+            Email = request.Email,
+            PasswordHash = passwordHash,
+            PasswordSalt = passwordSalt
+        };
+        #endregion
+
+        return Ok(new {message = "Kullanıcı kaydı başarıyla tamamlandı!"});
     }
 }

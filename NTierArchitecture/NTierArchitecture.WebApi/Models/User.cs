@@ -16,9 +16,5 @@ public sealed class User
     public byte[] PasswordHash { get; set; } = new byte[64];    
     public byte[] PasswordSalt { get; set; } = new byte[128];
 
-    public void CreatePassword(string password)
-    {
-        PasswordService.CreatePassword(password, out PasswordHash, out PasswordSalt);
-    }
 }
 
